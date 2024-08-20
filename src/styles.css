@@ -278,4 +278,7 @@ main p {
   .card-body{
     padding: 30px 10px;
   }
+
+  .secondary{
+    padding:  40px 10px;}
 }
