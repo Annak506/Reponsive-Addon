@@ -233,6 +233,10 @@ main p {
   display: block;
 }
 
+.extrapaddingbottom{
+  padding-bottom: 22px;
+}
+
 .card-body .btn {
   display: inline;
   margin-top: 10px;
