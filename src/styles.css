@@ -274,4 +274,8 @@ main p {
   section {
     padding: 30px;
   }
+
+  .card-body{
+    padding: 30px 10px;
+  }
 }
