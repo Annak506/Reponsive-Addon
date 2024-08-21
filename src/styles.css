@@ -36,6 +36,7 @@ header {
 
 .img-responsive {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -249,6 +250,52 @@ main p {
   margin-bottom: 24px; 
 }
 
+.grid-5-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.slideshow-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Ruimte tussen de kolommen */
+  padding-top: 20px;
+}
+
+.slideshow {
+  position: relative;
+}
+
+.slides {
+  width: 100%;
+}
+
+.active {
+  display: block;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 13px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(179, 173, 173, 0.5);
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+
 @media (max-width: 1260px) {
   header {
     padding: 60px 0;
@@ -281,4 +328,8 @@ main p {
 
   .secondary{
     padding:  40px 10px;}
+
+    .slideshow-container {
+      grid-template-columns: 1fr; /* Eén kolom op kleinere schermen */
+  }
 }

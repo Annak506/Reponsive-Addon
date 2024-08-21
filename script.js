@@ -63,12 +63,42 @@ inklapButtons.forEach(button => {
 
 
 });
+let hettyIndex = 0;
+let annaIndex = 0;
+
+function showSlide(slides, index) {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[index].style.display = "block";
+}
+
+function setupSlideshow(slideshowClass, prevBtnClass, nextBtnClass) {
+    let slides = document.querySelectorAll(slideshowClass + " img");
+    let index = 0;
+
+    showSlide(slides, index);
+
+    document.querySelector(prevBtnClass).addEventListener('click', function() {
+        index = (index > 0) ? index - 1 : slides.length - 1;
+        showSlide(slides, index);
+    });
+
+    document.querySelector(nextBtnClass).addEventListener('click', function() {
+        index = (index < slides.length - 1) ? index + 1 : 0;
+        showSlide(slides, index);
+    });
+}
 
 window.onload = function() {
+    setupSlideshow(".hetty-slide", ".hetty-prev", ".hetty-next");
+    setupSlideshow(".anna-slide", ".anna-prev", ".anna-next");
+
     var extraTexts = document.querySelectorAll('.extraText');
     extraTexts.forEach(function (p) {
         p.style.display = 'none';
     });
+
     var inklapBtns = document.querySelectorAll('.inklapBtn');
     inklapBtns.forEach(function(btn) {
         btn.style.display = 'none';
