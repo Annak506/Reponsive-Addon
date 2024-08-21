@@ -228,7 +228,8 @@ main p {
 
 .extraText {
   display: none;
-}
+  margin-top: 0; margin-bottom: 0; }
+
 
 .extraText.show {
   display: block;
