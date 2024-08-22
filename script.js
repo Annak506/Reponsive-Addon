@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.style.display = 'none';
 
             // Laat in plaats daarvan de inklap knop zien
-            card.querySelector('.inklapBtn').style.display = 'inline';
+            card.querySelector('.inklapBtn').style.display = 'block';
 
             // Scroll naar het begin van de blog
             card.scrollIntoView({ behavior: 'smooth' });
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.style.display = 'none';
 
             // Laat de lees verder knop weer zien
-            card.querySelector('.leesMeerBtn').style.display = 'inline';
+            card.querySelector('.leesMeerBtn').style.display = 'block';
 
             // Toon de blogs weer vanaf de foto's
             card.querySelector('.card-header').scrollIntoView({ behavior: 'smooth' });
