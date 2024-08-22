@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Laat in plaats daarvan de inklap knop zien
             card.querySelector('.inklapBtn').style.display = 'block';
-
+// Scroll naar het begin van de blog
+card.scrollIntoView({ behavior: 'smooth', block: 'start' });
             
         });
     });
